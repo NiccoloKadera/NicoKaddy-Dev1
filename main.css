@@ -197,7 +197,7 @@ body {
     height: 100%;
     width: 100%;
     background-image: var(--MapHome);
-    background-color: antiquewhite;
+    background-color: var(--Gray7F);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
