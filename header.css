@@ -1,0 +1,83 @@
+:root {
+    --Gray80: rgb(249, 249, 249, 0.8);
+    --Gray7F: rgb(127, 127, 127);
+    --logo: url(/html/Img/Logo4.png);
+    --DownFacingArrow: url('https://i.ibb.co/j4SmP6V/Down-Facing-Arrow.png');
+    --MapHome: url('https://i.ibb.co/m0rhNCH/HomeMap.png');
+    --White: #ffffff;
+    --PinkBuy: rgb(245, 62, 126);
+    --BluBuy: rgb(0, 122, 254);
+  }
+
+ .header {
+    display: flex;
+    height: 3em;
+    width: 100Vw;
+    position: fixed;
+    top: 0em;
+    background-color: var(--Gray80);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    animation: Slide-In-Down;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+ }
+
+ .headerItem {
+    max-height: 2.8em;
+    max-width: 5em;
+    flex: 1;
+    height: 2em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    text-align: center;
+    line-height: 2em;
+ }
+
+ #firstHeaderItem {
+    margin-left: 2.5em;
+ }
+
+ #logoHeaderItem {
+    margin-left: 0em;
+ }
+
+ #logo {
+    background-image: var(--logo);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+ .headerItemFontSize {
+    font-size: 1.35em;
+    max-width: 3em;
+    margin-right: 0em;
+ }
+ .nearBuy {
+    color: var(--PinkBuy);
+    font-family: Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif;
+    text-align: center;
+    font-size: 5em;
+ }
+ .nearBuy::after {
+    content: "Buy";
+    color: var(--BluBuy);
+    font-family: Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif;
+ }
+
+.nearBuyHeader {
+    font-size: 2em;
+    width: 4.1em;
+}
+@media screen and (max-width: 400px) {
+   .nearBuy {
+       font-size: 3.5em;
+   }
+   .nearBuyHeader {
+      display: none;
+  }
+ }

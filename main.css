@@ -1,0 +1,568 @@
+:root {
+    --Gray80: rgb(249, 249, 249, 0.8);
+    --Gray7F: rgb(127, 127, 127);
+    --logo: url(/html/Img/Logo4.png);
+    --DownFacingArrow: url(/html/Img/DownFacingArrow.png);
+    --MapHome: url(/html/Img/HomeMap.png);
+    --PositionMarker: url(/html/Img/PositionMarker.png)
+    --White: #ffffff;
+    --PinkBuy: rgb(245, 62, 126);
+    --BluBuy: rgb(0, 122, 254);
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Questrial';
+    scroll-behavior: smooth;
+ }
+
+ a {
+    text-decoration: none;
+ }
+
+
+
+
+.PageContentContainer {
+    height: 100Vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+}
+
+.PageContentContainer section {
+    z-index: 2;
+    height: 100Vh;
+    scroll-snap-align: start;
+}
+
+.sectionParentContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: 3em;
+    animation: CenterHomeText;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+}
+
+.sectionParentContainerHome {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-top: 3em;
+    animation: CenterHomeText;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+}
+
+.sectionContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 20em;
+}
+
+#FirstSectionParent {
+    flex-direction: column;
+}
+
+
+
+
+
+.LogoHome{
+    height: 10em;
+    width: 20em;
+    
+}
+
+.Title {
+    font-size: 2em;
+    text-align: center;
+}
+
+.learnMore{
+    top: -3em;
+    position: relative;
+    width: 100%;
+    height: 3em;
+    background-color: var(--Gray7F);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: Slide-In-Up;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+}
+
+.learnMoreItem {
+    text-align: center;
+    flex: 1;
+    line-height: 2.75em;
+    font-size: 1.1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+#downFacingArrow {
+    background-image: var(--DownFacingArrow);
+    max-width: 2em;
+    min-width: 2em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: downFacingArrowAnimation;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+}
+
+#learnMoreText {
+    max-width: 6em;
+    color: var(--White);
+    animation: learMoreTextAnimation;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+}
+
+@keyframes learMoreTextAnimation {
+    from {
+        transform: scale(0);
+    }
+  
+    to {
+        transform: scale(1);
+    }
+  }
+
+
+  @keyframes downFacingArrowAnimation {
+    from {
+        transform: translate(150%, 0%);
+    }
+  
+    to {
+        transform: translate(0%, 0%);
+    }
+  }
+
+  @keyframes Slide-In-Down {
+    from {
+        transform: translate(0%, -250%);
+    }
+  
+    to {
+        transform: translate(0%, 0%);
+    }
+  }
+
+  @keyframes Slide-In-Up {
+    from {
+        transform: translate(0%, 250%);
+        opacity: 0;
+    }
+  
+    to {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+  }
+
+.MapHome{
+    flex: 2;
+    perspective: 1500px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0em;
+    width: 90dvw;
+    margin-bottom: -1em;
+}
+
+.MapHomeImg {
+    max-width: 60em;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-image: var(--MapHome);
+    background-color: antiquewhite;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 2em;
+    animation: MapHomePerspective;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes MapHomePerspective {
+    from {
+        transform: rotateX(0deg);
+        transform: translate(0%, 50%);
+    }
+  
+    to {
+        transform: rotateX(45deg) translate(0%, -6em);
+    }
+  }
+
+  @keyframes CenterHomeText {
+    from {
+        transform: translate(0%, -50%);
+        opacity: 0;
+    }
+  
+    to {
+        transform: translate(0%, 10%);
+        opacity: 1;
+    }
+  }
+
+#SecondSection {
+    margin-top: -100Vh;
+}
+
+.OverlayParentSectionTwo {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.PositionSection {
+    position: relative;
+    height: 100%;
+    display: flex;
+}
+.MarkerContainerSpacer{
+    flex: 1;
+    min-height: 25em;
+}
+.MarkerParentContainer {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MarkerContainer{
+    flex: 1;
+    height: 100%;
+    max-width: 60em;
+}
+
+.MarkerContainer img {
+    position: relative;
+    max-width: 2em;
+}
+
+#Marker1 {
+    left: 4em;
+    top: 20em;
+    animation: Marker-Slide-In-Top 0.7s linear 1s 1 normal both;
+}
+
+#Marker2 {
+    left: 20em;
+    top: 15em;
+    animation: Marker-Slide-In-Top 0.7s linear 1.08s 1 normal both;
+}
+
+#Marker3 {
+    left: 10em;
+    top: 30em;
+    animation: Marker-Slide-In-Top 0.7s linear 1.15s 1 normal both;
+}
+
+#Marker4 {
+    left: 40em;
+    top: 4em;
+    animation: Marker-Slide-In-Top 0.7s linear 1.20s 1 normal both;
+}
+
+#Marker5 {
+    left: 43em;
+    top: 26em;
+    animation: Marker-Slide-In-Top 0.7s linear 1.25s 1 normal both;
+}
+
+#Marker6 {
+    left: 3em;
+    top: 6em;
+    animation: Marker-Slide-In-Top 0.7s linear 1.3s 1 normal both;
+}
+#Marker7 {
+    left: 5em;
+    top: 3em;
+    animation: Marker-Slide-In-Top 0.7s linear 1.35s 1 normal both;
+}
+#Marker8 {
+    left: -6em;
+    top: 7em;
+    animation: Marker-Slide-In-Top 0.7s linear 1.4s 1 normal both;
+}
+#Marker9 {
+    left: 5em;
+    top: 7em;
+    animation: Marker-Slide-In-Top 0.7s linear 1.45s 1 normal both;
+}
+#Marker10 {
+    left: 7em;
+    top: 12em;
+    animation: Marker-Slide-In-Top 0.7s linear 1.5s 1 normal both;
+}
+#Marker11 {
+    left: 7em;
+    top: 14em;
+    animation: Marker-Slide-In-Top 0.7s linear 1.55s 1 normal both;
+}
+#Marker12 {
+    left: 10em;
+    top: 4em;
+    animation: Marker-Slide-In-Top 0.7s linear 1.65s 1 normal both;
+}
+#Marker13 {
+    left: 14em;
+    top: 7em;
+    animation: Marker-Slide-In-Top 0.7s linear 1.7s 1 normal both;
+}
+#Marker14 {
+    left: 3em;
+    top: 15em;
+    animation: Marker-Slide-In-Top 0.7s linear 1.75s 1 normal both;
+}
+#Marker15 {
+    left: 0em;
+    top: 30em;
+    animation: Marker-Slide-In-Top 0.7s linear 1.8s 1 normal both;
+}
+#Marker16 {
+    left: 2em;
+    top: 13em;
+    animation: Marker-Slide-In-Top 0.7s linear 1s 1 normal both;
+}
+@keyframes Marker-Slide-In-Top {
+    0% {
+        transform: translate(0%, -35%);
+        opacity: 0;
+    }
+  
+    100% {
+        transform: translate(0%, 0%) scale(1);
+        opacity: 1;
+    }
+  }
+  @media screen and (max-height: 5000px) {
+    .MarkerContainer {
+      transform: translate(-2em, 20em);
+    }
+    #Marker4 {
+        left: 10em;
+     }
+     #Marker5 {
+        left: 3em;
+     }
+  }
+  @media screen and (max-height: 2500px) {
+    .MarkerContainer {
+      transform: translate(-2em, 15em);
+    }
+  }
+  @media screen and (max-height: 2000px) {
+    .MarkerContainer {
+      transform: translate(-2em, 8em);
+    }
+  }
+
+  @media screen and (max-height: 1350px) {
+    .MarkerContainer {
+      transform: translate(-2em, 0em);
+    }
+  }
+
+  @media screen and (max-height: 1024px) {
+    .MarkerContainer {
+        transform: translate(-1em, -3em);
+      }
+    #Marker3 {
+       left: 3em;
+       top: 8em;
+    }
+    #Marker15 {
+        left: -10em;
+        top: 10em;
+    }
+    #Marker2 {
+        left: 7em;
+        top: 15em;
+    }
+  }
+  
+  @media screen and (max-height: 900px) {
+    .MarkerContainer {
+      transform: translate(-1em, -1em);
+    }
+    #Marker5 {
+       top: 3em;
+       left: 5em;
+    }
+  }
+  @media screen and (max-height: 800px) {
+    .MarkerContainer {
+      transform: translate(0em, -1em);
+    }
+    #Marker1 {
+        top: 2em;
+     }
+  }
+  @media screen and (max-height: 700px) {
+    .MarkerContainer {
+      transform: translate(0em, 0em);
+    }
+    #Marker1 {
+        top: 3em;
+    }
+    #Marker11 {
+        top: 2em;
+    }
+    #Marker14 {
+        top: 3em;
+    }
+    #Marker2 {
+        top: 1em;
+    }
+    #Marker16 {
+        top: 6em;
+    }
+    #Marker10 {
+        top: 3em;
+    }
+  }
+
+  @media screen and (max-height: 650px) {
+    .MarkerContainer {
+      transform: translate(0em, -2em);
+    }
+  }
+
+  @media screen and (max-height: 580px) {
+    .MarkerContainer {
+      transform: translate(0em, -4em);
+    }
+    #Marker15 {
+        left: -10em;
+        top: 2em;
+    }
+    #Marker3 {
+        left: 3em;
+        top: 2em;
+     }
+  }
+  @media screen and (max-height: 490px) {
+    .MarkerContainer {
+      transform: translate(0em, -4em);
+    }
+    #Marker9 {
+        top: 1em;
+        left: 8em;
+    }
+    #Marker8 {
+        top: 1.5em;
+        left: 8em;
+     }
+     #Marker13 {
+        top: 0.5em;
+     }
+  }
+  @media screen and (max-height: 450px) {
+    .MarkerContainer {
+      transform: translate(0em, -4em);
+    }
+    #Marker16 {
+        top: 1em;
+        
+    }
+    #Marker6 {
+        top: 1.5em;
+        
+    }
+  }
+  @media screen and (max-height: 420px) {
+    .MarkerContainer {
+      display: none;
+    }
+    .MapHomeImg {
+        display: none;
+    }
+  }
+  
+
+
+
+
+
+
+
+  @media screen and (max-width: 725px) {
+    #Marker13 {
+        left: 0em;
+    } 
+  }
+  @media screen and (max-width: 630px) {
+    #Marker16 {
+        left: -15em;
+    } 
+    #Marker12 {
+        left: -5em;
+    } 
+    #Marker14 {
+        left: -5em;
+    } 
+  }
+  @media screen and (max-width: 560px) {
+    #Marker14 {
+        left: -7em;
+    }
+    #Marker11 {
+        left: -2em;
+    }
+  }
+  @media screen and (max-width: 490px) {
+    #Marker11 {
+        left: -7em;
+    }
+    #Marker13 {
+        left: -8em;
+    }
+    #Marker10 {
+        left: -3em;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    #Marker9 {
+        left: -3em;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    #Marker15 {
+        left: -4em;
+    }
+    #Marker14 {
+        left: -5em;
+    }
+  }
