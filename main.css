@@ -25,7 +25,7 @@ body {
 
 
 .PageContentContainer {
-    height: 100Vh;
+    height: 100dvh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     overflow-x: hidden;
@@ -33,7 +33,7 @@ body {
 
 .PageContentContainer section {
     z-index: 2;
-    height: 100Vh;
+    height: 100dvh;
     scroll-snap-align: start;
 }
 
@@ -231,7 +231,7 @@ body {
   }
 
 #SecondSection {
-    margin-top: -100Vh;
+    margin-top: -100dvh;
 }
 
 .OverlayParentSectionTwo {
