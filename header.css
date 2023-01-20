@@ -77,4 +77,8 @@
    .nearBuy {
        font-size: 3.5em;
    }
+   .nearBuyHeader {
+    font-size: 2em;
+    width: 4.1em;
+    }
  }
