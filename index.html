@@ -10,7 +10,9 @@
         <link rel="icon" href="Logo4.png" title="image/x-icon"> <! -- Icona in alto. -->
         <link rel="stylesheet" href="main.css" type="text/css"> <! -- Link a file css. -->
         <link rel="stylesheet" href="header.css" type="text/css"> <! -- Link a file css. -->
+        <link rel="stylesheet" href="Slider.css" type="text/css"> <! -- Link a file css. -->
         <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet'>
+        <script src="slider.js" defer></script>
     </head>
     <body>
         <div class="header">
@@ -21,7 +23,7 @@
         <div class="PageContentContainer">
             <section>
                 <div class="sectionParentContainerHome" id="FirstSectionParent">
-                    <div class="sectionContainer" id="1Section">
+                    <div class="sectionContainer" id="FirstSectionContainer">
                         <div class="LogoHome" ><div class="nearBuy">near</div></div>
                         <div class="Title">Ti aiutiamo a trovare quello che ti serve<br>quando ti serve.</div>
                     </div>
@@ -59,10 +61,24 @@
                     <div class="learnMoreItem" id="learnMoreText">Scopri di più</div>
                 </div></a>
             </section>
-            <section id="ThirdSection">
-                <h2>Section three</h2>
+            <section class="SectionFlexCenter" id="ThirdSection">
+                        <div class="Carosello" data-carosello>
+                            <button class="Carosello-Freccia Prossimo" data-pulsanticarosello="prossimo"><img src="/html/Img/RightFacingBlackArrow.png" alt=""></button>
+                            <button class="Carosello-Freccia Precedente" data-pulsanticarosello="precedente"><img src="/html/Img/LeftFacingBlackArrow.png" alt=""></button>
+                            <ul data-slides>
+                                <li class="slide" data-imgattiva>
+                                    <img src="https://images.unsplash.com/photo-1674566254817-9bfe016f528a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
+                                </li>
+                                <li class="slide" data-imgnonattiva2>
+                                    <img src="https://images.unsplash.com/photo-1661956602153-23384936a1d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
+                                </li>
+                                <li class="slide" data-imgnonattiva1>
+                                    <img src="https://images.unsplash.com/photo-1674534634524-494a8eb3300e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80" alt="">
+                                </li>
+                            </ul>
+                        </div>
             </section>
-            <section id="ThirdSection">
+            <section id="FourthSection">
                 <h2>Section Fourth</h2>
             </section>
         </div>

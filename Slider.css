@@ -1,0 +1,139 @@
+:root {
+    --Gray80: rgb(249, 249, 249, 0.8);
+    --Gray7F: rgb(127, 127, 127);
+    --logo: url(/html/Img/Logo4.png);
+    --DownFacingArrow: url(/html/Img/DownFacingArrow.png);
+    --MapHome: url(/html/Img/HomeMap.png);
+    --White: #ffffff;
+    --PinkBuy: rgb(245, 62, 126);
+    --BluBuy: rgb(0, 122, 254);
+    --CarouselBorderRadious: 3em;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Questrial';
+    scroll-behavior: smooth;
+ }
+ 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+ .Carosello {
+    margin-top: 3em;
+    width: 50em;
+    height: 50em;
+    position: relative;
+    overflow: hidden;
+ }
+
+ .Carosello ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+ }
+
+ .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 0.5s;
+ }
+
+ .slide[data-imgattiva] {
+    opacity: 1;
+    z-index: 1;
+    transform: translate(0%); 
+ }
+
+ .slide[data-imgnonattiva1] {
+    transform: translate(-100%);
+    opacity: 0; 
+ }
+
+ .slide[data-imgnonattiva2] {
+    transform: translate(+100%);
+    opacity: 0;
+ }
+
+.slide img {
+    border-radius: var(--CarouselBorderRadious);
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.Carosello-Freccia {
+    position: absolute;
+    background-color: rgb(255, 255, 255, 0.7);
+    border-style:none;
+    border-radius: 2em;
+    height: 4em;
+    width: 2em;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    transition: 0.5s;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.Carosello-Freccia img {
+    position: absolute;
+    width: 1em;
+    height: 2em;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.Precedente img {
+    left: 0.4em;
+}
+
+.Precedente {
+    left: 1em;
+}
+
+.Prossimo {
+    right: 1em;
+}
+
+.Prossimo img{
+    right: 0.4em;
+}
+
+.Carosello-Freccia:hover, .Carosello-Freccia:focus {
+    background-color: rgb(255, 255, 255, 1);
+    transition: 0.3s;
+}
+
+.Carosello-Freccia:focus {
+    outline: 0.5em solid black;
+}
+
+.Carosello-Freccia:active, .Carosello-Freccia:active {
+    background-color: rgb(255, 255, 255, 1);
+    transform: scale(1.3) translateY(-40%);
+    transition: 0.3s;
+}
+
+@media screen and (max-height: 65em), (max-width: 65em) {
+    .Carosello {
+        width: 40em;
+        height: 40em;
+    }
+}
+@media screen and (max-height: 50em), (max-width: 50em) {
+    .Carosello {
+        margin-top: 0em;
+        width: 100dvw;
+        height: 100dvh;
+    }
+    .slide img {
+        border-radius: 0em;
+    }
+}
