@@ -13,6 +13,8 @@
         <link rel="stylesheet" href="Slider.css" type="text/css"> <! -- Link a file css. -->
         <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet'>
         <script src="slider.js" defer></script>
+        <link rel="manifest" href="manifest.json">
+        <link rel="shortcut icon" type="image/x-icon" href="https://github.com/NiccoloKadera/NicoKaddy-Dev1/blob/main/Img/FavIcon1.png?raw=true">
     </head>
     <body>
         <div class="header">
@@ -82,6 +84,10 @@
                 <h2>Section Fourth</h2>
             </section>
         </div>
- 
+        <script>
+            if('serviceWorker' in navigator) {
+                navigator.serviceWorker.register("NicoKaddy-Dev1/service-worker.js")
+            }
+        </script>
     </body>
 </html>
