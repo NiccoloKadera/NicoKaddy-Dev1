@@ -1,7 +1,8 @@
 {
     "name": "nearBuy",
     "short_name": "nB",
-    "start_url": "/?home=true",
+    "start_url": "/NicoKaddy-Dev1/",
+    "description": "First trial of nearBuyPWApp",
     "icons": [
         {
           "src": "Img/PWAIcons/manifest-icon-192.maskable.png",
