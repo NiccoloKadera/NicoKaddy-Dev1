@@ -86,7 +86,16 @@
         </div>
         <script>
             if('serviceWorker' in navigator) {
-                navigator.serviceWorker.register("service-worker.js")
+                navigator.serviceWorker.register(
+                importScripts(
+                    'https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js'
+                  );
+
+                workbox.routing.registerRoute(
+                    ({request}) => request.destination === 'image',
+                    new workbox.strategies.CacheFirst()
+                );
+                )
             }
         </script>
     </body>
